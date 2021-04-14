@@ -5,12 +5,12 @@ class ProductCard extends React.Component {
 
     // renders product images and information to the DOM
     render() {
-        console.log(this.props.products)
+        console.log('prod',this.props.products)
         const productsArray = this.props.products.map(prod => (
             <div  key={prod.id}>
                 <div className={ProductCardStyle.prodcontainer}>
                     <a className={ProductCardStyle.title}>{prod.title}</a>
-                    <img className={ProductCardStyle.image} src={prod.image}  alt={prod.title}/>
+                    <img className={ProductCardStyle.image} src={prod.image} alt={prod.title}/>
                         <div className={ProductCardStyle.price}>
                             <p id="price"> Price: ${prod.price}</p>
                             {/* <p>{prod.category}</p>
