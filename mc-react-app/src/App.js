@@ -1,6 +1,7 @@
 import React from "react"
 import SearchBar from "./components/SearchBar"
 import ProductCard from "./components/ProductCard"
+import "./App.css"
 
 class App extends React.Component {
 
@@ -10,10 +11,11 @@ class App extends React.Component {
       products: [],
     }
   }
+  // Waits tof compoents to mount then fetches data via api
   componentDidMount(){
     this.findProducts();
   }
- 
+  //fetches data, converts to json and resets the state
     findProducts = () => {
       let url = 'https://fakestoreapi.com/products'
       fetch(url)

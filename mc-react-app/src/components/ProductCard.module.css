@@ -1,0 +1,23 @@
+.prodcontainer {
+    display: grid;
+    grid-template-rows: auto 30px 30px;
+    width: 300px;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .image {
+    grid-row: 1;
+    max-width: 90%;
+    padding: 10px;
+  }
+  
+  .title {
+    grid-row: 2;
+    font-weight: bold;
+  }
+  
+  .price{
+    grid-row: 3;
+  }
