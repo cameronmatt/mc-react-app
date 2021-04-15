@@ -1,32 +1,44 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 import HomeStyle from './Home.module.css'
+import clothing from "./Images/clothing.png"
+import electronics from "./Images/electronics.png"
+import jewelery from "./Images/jewelery.png"
 
 class Home extends React.Component {
 
+    constructor() {
+        super()
     
+        this.state = {
+          products: []
+        }
+      }
 
     render() {
         //console.log('prod',this.props.products)
         return (
+
             <div className="home-menu" key={"home"}>
                 <div>
-                    <SearchBar />
                     <img
                         className={HomeStyle.image1}
-                        src="code/mc-react-app/src/components/Images/clothing.jpeg"
+                        src={clothing}
                         alt="Clothing"
                     />
+                    <p className={HomeStyle.cat1} >Clothing</p>
                     <img
                         className={HomeStyle.image2}
-                        src="code/mc-react-app/src/components/Images/eletronics.jpeg"
+                        src={electronics}
                         alt="Electronics"
                     />
+                    <p className={HomeStyle.cat2}>Electronics</p>
                     <img
                         className={HomeStyle.image3}
-                        src="code/mc-react-app/src/components/Images/jewelery.jpeg"
+                        src={jewelery}
                         alt="Jewelery"
                     />
+                    <p className={HomeStyle.cat3}>Jewelery</p>
                 </div>
             </div>
         )

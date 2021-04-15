@@ -1,0 +1,24 @@
+.wrapper {
+    position: relative;
+    min-width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+.searchbar {
+    grid-column: 2;
+    border: 3px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    height: 40px;
+    width: 60%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+    margin: auto;
+}
+
+.searchbar:hover, .searchbar:focus {
+    border: 3px solid #90c4ff;
+    background-color: white;
+  }
+
