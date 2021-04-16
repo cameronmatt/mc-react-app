@@ -1,9 +1,9 @@
 import React from 'react'
-import SearchBar from './SearchBar'
 import HomeStyle from './Home.module.css'
 import clothing from "./Images/clothing.png"
 import electronics from "./Images/electronics.png"
 import jewelery from "./Images/jewelery.png"
+
 
 class Home extends React.Component {
 
