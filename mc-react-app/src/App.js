@@ -24,7 +24,7 @@ function App() {
         .then(data => {
           //this.storeProducts(data)
           setProducts(data)
-          console.log('fetch',data)
+          //console.log('fetch',data)
           
         })
         .catch(firstGetError => console.log(firstGetError))
