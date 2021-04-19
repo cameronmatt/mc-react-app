@@ -1,0 +1,25 @@
+.item {
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    grid-template-columns: 1fr;
+    border-style: solid;
+  }
+
+  .image {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 10px;
+    max-width:90%;
+    height:auto;
+    text-align: center;
+  }
+
+  .title {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .price{
+    grid-row: 3;
+    grid-column: 1;
+  }

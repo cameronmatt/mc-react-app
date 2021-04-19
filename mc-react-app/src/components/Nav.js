@@ -9,7 +9,8 @@ class Nav extends React.Component {
         return (
             <div>
                 <Link to='/'>Home</Link>
-                <Link to='/clothing'>Clothing</Link>
+                <Link to='/menclothing'>Men's Clothing</Link>
+                <Link to='/womenclothing'>Women's Clothing</Link>
                 <Link to='/electronics'>Electronics</Link>
                 <Link to='/jewelery'>Jewelery</Link>
             </div>

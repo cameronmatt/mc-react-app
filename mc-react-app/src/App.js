@@ -1,11 +1,10 @@
-import React, {useContext, useState, useEffect} from "react"
-//import ProductCard from "./components/ProductCard"
+import React, {useState, useEffect} from "react"
 import Home from "./components/Home"
-import Clothing from "./components/Clothing"
-// import Electronics from "./components/Electronics"
-// import Jewelery from "./components/Jewelery"
-// import SearchBar from "./components/SearchBar"
-import AppStyle from "./App.module.css"
+import MenClothing from "./components/MenClothing"
+import WomenClothing from "./components/WomenClothing"
+import Electronics from "./components/Electronics"
+import Jewelery from "./components/Jewelery"
+//import SearchBar from "./components/SearchBar"
 import { BrowserRouter, Route } from 'react-router-dom'
 import Nav from "./components/Nav"
 import ProductsContext from "./Contexts/ProductContext"
@@ -65,23 +64,24 @@ function App() {
 
    return ( 
 
-      <div className={AppStyle.container}>
+      <div>
 
         <ProductsContext.Provider value={{products, setProducts}}>
         {/* <p className={AppStyle.header}>bluff</p> */}
         {/* <SearchBar products={this.state.products} className={AppStyle.searchbar}/> */}
-        <Home className={AppStyle.home}/>
+        {/* <Home className={AppStyle.home}/> */}
         
         <BrowserRouter>
-        <Nav />
-        <Route exact path="/" component={Home} className={AppStyle.home}/>
-        <Route exact path="/clothing" component={Clothing}/>
-        {/* <Route exact path="/electronics" component={Electronics}/>
-        <Route exact path="/jewelery" component={Jewelery}/>  */}
+        {/* <Nav /> */}
+        <Route exact path="/" component={Home} />
+        <Route exact path="/menclothing" component={MenClothing}/>
+        <Route exact path="/womenclothing" component={WomenClothing}/>
+        <Route exact path="/electronics" component={Electronics}/>
+        <Route exact path="/jewelery" component={Jewelery}/> 
         {/* <Route exact path="/product/:id" render={props => ( <ProductPage { ...props } id={this.state} />  )} /> */}
         
         </BrowserRouter>
-        {/* <ProductCard products={this.state.products}/> */}
+        {/* <ProductPage products={this.state.products}/> */}
 
         </ProductsContext.Provider>
       </div>

@@ -1,0 +1,101 @@
+.homecontainer {
+    max-width: 960px;
+    display: grid;
+    grid-template-rows: 50px 100px 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  /* .searchbar {
+    grid-row: 2;
+    grid-column: 2 /span 4;
+  } */
+
+  .logo {
+    max-width:150px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .menclothing {
+    grid-row: 3;
+    grid-column: 1;
+    height:auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+  }
+
+  .womenclothing {
+    grid-row: 3;
+    grid-column: 2;
+    height:auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+  }
+  
+  .electronics {
+    grid-row: 3;
+    grid-column: 3;
+    height:auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+  } 
+  
+  .jewelery {
+    grid-row: 3;
+    grid-column: 4;
+    height:auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+  }
+
+
+  .image1 {
+    padding: 10px;
+    max-width:60%;
+  }
+
+  .image2 {
+    padding: 10px;
+    max-width:60%;
+  }
+  
+  .image3 {
+    padding: 10px;
+    max-width:60%;
+  } 
+  
+  .image4 {
+    padding: 10px;
+    max-width:60%;
+  }
+
+  .clothingLink {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .womenclothingLink {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .electronicsLink {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .jeweleryLink {
+    text-decoration: none;
+    font-weight: bold;
+  }
+

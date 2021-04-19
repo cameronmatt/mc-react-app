@@ -1,16 +1,35 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {ProductsContext} from "../Contexts/ProductContext"
+import { Link } from 'react-router-dom'
+import CategoryStyle from './css/category.module.css'
+import bluff from "./Images/bluff.png"
+import ProductCard from "./ProductCard.js"
 
-const Jewelery = ({products}) => {
-    const jeweleryProducts = products.map(prod => prod)
+function Jewelery() {
 
-    const filteredJewelery = jeweleryProducts.category.filter((product) => {
-        return product.category.includes("jewelery")
-    })
+        const  product  = useContext(ProductsContext)
+    
+          function filterProduct() {
+            const selectedProduct = product.products.filter((item) => item.category === 'jewelery');
+            return selectedProduct
+          }
 
-    return (
-    <div>
-        {jeweleryProducts} 
-    </div>
-    )
+        return ( 
+            
+            <div className={CategoryStyle.catcontainer}>
+                <img className={CategoryStyle.logo} src={bluff} alt="logo"/>
+                <Link className={CategoryStyle.back} to="/">Back</Link>
+                <div>
+                    {filterProduct().map(prod => (
+                        <div>
+                            <ProductCard prod={prod}/>
+                        </div>
+                        ))}    
+                </div>
+            </div>
+            
+            )
+        
 }
+
 export default Jewelery
