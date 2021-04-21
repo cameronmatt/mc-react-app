@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react"
 import Home from "./components/Home"
-import MenClothing from "./components/MenClothing"
-import WomenClothing from "./components/WomenClothing"
+import Menswear from "./components/Menswear"
+import Womenswear from "./components/Womenswear"
 import Electronics from "./components/Electronics"
 import Jewelery from "./components/Jewelery"
+import ProductPage from './components/ProductPage'
 //import SearchBar from "./components/SearchBar"
 import { BrowserRouter, Route } from 'react-router-dom'
 import Nav from "./components/Nav"
@@ -67,18 +68,16 @@ function App() {
       <div>
 
         <ProductsContext.Provider value={{products, setProducts}}>
-        {/* <p className={AppStyle.header}>bluff</p> */}
         {/* <SearchBar products={this.state.products} className={AppStyle.searchbar}/> */}
-        {/* <Home className={AppStyle.home}/> */}
         
         <BrowserRouter>
         {/* <Nav /> */}
         <Route exact path="/" component={Home} />
-        <Route exact path="/menclothing" component={MenClothing}/>
-        <Route exact path="/womenclothing" component={WomenClothing}/>
+        <Route path="/product/:id" component={ProductPage}/>
+        <Route exact path="/menclothing" component={Menswear}/>
+        <Route exact path="/womenclothing" component={Womenswear}/>
         <Route exact path="/electronics" component={Electronics}/>
         <Route exact path="/jewelery" component={Jewelery}/> 
-        {/* <Route exact path="/product/:id" render={props => ( <ProductPage { ...props } id={this.state} />  )} /> */}
         
         </BrowserRouter>
         {/* <ProductPage products={this.state.products}/> */}

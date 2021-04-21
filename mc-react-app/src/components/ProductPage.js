@@ -1,34 +1,30 @@
-import React from 'react'
-import ProductPageStyle from './ProductCard.module.css'
+import React, {useState} from 'react'
+import ProductPageStyle from './ProductPage.module.css'
 
-class ProductCard extends React.Component {
+function ProductPage(props) {
 
-    // renders product images and information to the DOM
-    render() {
-        console.log('prod',this.props.products)
-        const productsArray = this.props.products.map(prod => (
-            <div  key={prod.id}>
+        console.log("item", props)
+        // renders product images and information to the DOM
+        return (
+        <div className="card" key={"545"}>
+            <div  >
                 <div className={ProductPageStyle.prodcontainer}>
-                    <a className={ProductPageStyle.title}>{prod.title}</a>
-                    <img className={ProductPageStyle.image} src={prod.image} alt={prod.title}/>
+                    <a className={ProductPageStyle.title}>{props.location.prod.prod.title}</a>
+                    <img className={ProductPageStyle.image} src={props.location.prod.prod.image} alt={props.location.prod.prod.title}/>
                         <div className={ProductPageStyle.price}>
-                            <p id="price"> Price: ${prod.price}</p>
-                            {/* <p>{prod.category}</p>
-                            <p>{prod.description}</p> */}
-                        </div>
+                            <p id="price"> Price: ${props.location.prod.prod.price}</p>
+                            <p>{props.location.prod.prod.category}</p>
+                            <p>{props.location.prod.prod.description}</p>
                 </div>
+            </div>
                 {/* <div className="buy">
                 {isInCart && <button className="in-cart" >Added to shopping cart</button>}
                 {!isInCart && <button className="notincart" onClick={this.handleAddCart} >Add to shopping cart</button>}
                 </div> */}
             </div>
-        ))
-        return (
-          <div className="card">
-            {productsArray}
-          </div>
+        </div>
         )
-    }
-}
+    }   
 
-export default ProductCard
+
+export default ProductPage
