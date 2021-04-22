@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import Home from "./components/Home"
+import Cart from "./components/Cart"
 import Menswear from "./components/Menswear"
 import Womenswear from "./components/Womenswear"
 import Electronics from "./components/Electronics"
@@ -74,8 +75,9 @@ function App() {
         {/* <Nav /> */}
         <Route exact path="/" component={Home} />
         <Route path="/product/:id" component={ProductPage}/>
-        <Route exact path="/menclothing" component={Menswear}/>
-        <Route exact path="/womenclothing" component={Womenswear}/>
+        <Route exact path="/cart" component={Cart}/>
+        <Route exact path="/menswear" component={Menswear}/>
+        <Route exact path="/womenswear" component={Womenswear}/>
         <Route exact path="/electronics" component={Electronics}/>
         <Route exact path="/jewelery" component={Jewelery}/> 
         

@@ -1,40 +1,36 @@
 import React, {useContext, useState} from 'react'
 import {ProductsContext} from "../Contexts/ProductContext"
-//import SearchResults from './SearchResults'
-import SearchStyle from './SearchBar.module.css'
+import SearchStyle from './css/SearchBar.module.css'
 import Select from 'react-select';
-import { Redirect, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Redirect, useHistory, Link, BrowserRouter as Router } from 'react-router-dom'
 
 function SearchBar() {
+
+    const history = useHistory();
 
     const product = useContext(ProductsContext)
 
     const [products, setProducts] = useState([]);
 
     const newProducts = product.products.map(prod => ( 
-        <Link to={{ 
-            pathname: `product/${prod.id}`, prod: {prod}
-            }} > 
-            {prod.title}
-        {/* {label: prod.title, 
+        {label: prod.title, 
         value: prod.title,
         id: prod.id,
         description: prod.description,
         price: prod.price,
-        image: prod.image} */}
-        </Link> 
+        image: prod.image}
     ))
 
     //console.log(newProducts)
 
     const handleClick = (item) =>  {
         console.log("card", item); 
-        return (
-        <Router>
-            <Redirect to={{ pathname: `product/${item.id}`, prod: {item}}} />
-        </Router>)
+        history.push({
+            pathname: `/product/${item.id}`,
+            state: {...item}
         //setProducts(value)
         //console.log("value", products)
+        })
     }
 
 

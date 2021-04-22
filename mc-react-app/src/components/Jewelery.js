@@ -2,13 +2,16 @@ import React, {useContext} from 'react'
 import {ProductsContext} from "../Contexts/ProductContext"
 import { Link } from 'react-router-dom'
 import CategoryStyle from './css/category.module.css'
-import bluff from "./Images/bluff.png"
+import Logo from "./Logo"
 import ProductCard from "./ProductCard.js"
+import SearchBar from "./SearchBar"
+import Nav from "./Nav"
 
 function Jewelery() {
 
         const  product  = useContext(ProductsContext)
-    
+        
+
           function filterProduct() {
             const selectedProduct = product.products.filter((item) => item.category === 'jewelery');
             return selectedProduct
@@ -17,11 +20,12 @@ function Jewelery() {
         return ( 
             
             <div className={CategoryStyle.catcontainer}>
-                <img className={CategoryStyle.logo} src={bluff} alt="logo"/>
-                <Link className={CategoryStyle.back} to="/">Back</Link>
+                <Logo />
+                <SearchBar />
+                <Nav />
                 <div>
                     {filterProduct().map(prod => (
-                        <div>
+                        <div className={CategoryStyle.card}>
                             <ProductCard prod={prod}/>
                         </div>
                         ))}    

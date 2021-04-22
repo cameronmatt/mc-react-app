@@ -10,6 +10,7 @@ class Nav extends React.Component {
         return (
             <div>
                 <ul className={NavList.list}>
+                <li><Link to='/' className={NavList.listItem}>Back</Link></li>
                 <li><Link to='/' className={NavList.listItem}>Home</Link></li>
                 <li><Link to='/menswear' className={NavList.listItem}>Menswear</Link></li>
                 <li><Link to='/womenswear' className={NavList.listItem}>Womenswear</Link></li>

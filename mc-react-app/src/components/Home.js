@@ -22,12 +22,12 @@ const Home = () => {
                     <SearchBar className={HomeStyle.search}/>
                 </div>
 
-                <div className={HomeStyle.menswearLink}>
+                <div className={HomeStyle.menswear}>
                     <a href="./menswear"><img  className={HomeStyle.image1} src={menswear} alt="Menswear" /></a>
                     <Link to="./menswear" className={HomeStyle.menswearLink} >Menswear</Link>
                 </div>
 
-                <div className={HomeStyle.womenswearLink}>
+                <div className={HomeStyle.womenswear}>
                     <a href="./womenswear"><img  className={HomeStyle.image2} src={womenswear} alt="Womenswear" /></a>
                     <Link to='./womenswear'className={HomeStyle.womenswearLink} >Womenswear</Link>
                 </div>

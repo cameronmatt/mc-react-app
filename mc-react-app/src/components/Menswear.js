@@ -2,29 +2,27 @@ import React, {useContext} from 'react'
 import {ProductsContext} from "../Contexts/ProductContext"
 import { Link } from 'react-router-dom'
 import CategoryStyle from './css/category.module.css'
-import bluff from "./Images/bluff.png"
+import Logo from "./Logo"
 import ProductCard from "./ProductCard.js"
+import SearchBar from "./SearchBar"
 import Nav from "./Nav"
 
 function Menswear() {
 
         const  product  = useContext(ProductsContext)
+        console.log("product", product)
     
           function filterProduct() {
-            const selectedProduct = product.products.filter((item) => item.category === 'men clothing');
+            const selectedProduct = product.products.filter((item) => item.category === "men's clothing");
             return selectedProduct
           }
 
         return ( 
             
             <div className={CategoryStyle.catcontainer} key={product.id}>
-                <div >
-                    <img className={CategoryStyle.logo} src={bluff} alt="logo"/>
-                </div>
-                <div className={CategoryStyle.back} >
-                    <Link to="/">Back</Link>
-                    <Nav />
-                </div>
+                <Logo />
+                <SearchBar />
+                <Nav />
                 <div>
                     {filterProduct().map(prod => (
                         <div className={CategoryStyle.card}>

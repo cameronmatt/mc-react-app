@@ -3,17 +3,12 @@ import ProductCardStyle from './css/ProductCard.module.css'
 import { Link } from 'react-router-dom'
 
 const ProductCard = ({prod}) => {
-    console.log("prod", prod)
 
     const [product, setProduct] = useState({});
         
-    
             const handleClick = () => {
-                console.log("card", prod); 
                 setProduct(prod)
             
-                console.log("value", product)
-                console.log("setProduct", setProduct)
             }
 
         return ( 
@@ -25,7 +20,7 @@ const ProductCard = ({prod}) => {
                 {/* <button className={ProductCardStyle.button}>View item</button> */} </a>
                 <Link to={{ 
                     pathname: `product/${prod.id}`, 
-                    prod: {prod}
+                    state: {...prod}
                     }} 
                     className={ProductCardStyle.button} 
                     onClick={handleClick}> 
