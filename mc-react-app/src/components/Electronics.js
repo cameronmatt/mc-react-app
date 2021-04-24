@@ -6,34 +6,35 @@ import Logo from "./Logo"
 import ProductCard from "./ProductCard.js"
 import SearchBar from "./SearchBar"
 import Nav from "./Nav"
+import CartButton from "./CartButton"
 
 function Electronics() {
 
-  const  product  = useContext(ProductsContext)
+    const  product  = useContext(ProductsContext)
         
 
-  function filterProduct() {
-    const selectedProduct = product.products.filter((item) => item.category === 'electronics');
-    return selectedProduct
-  }
+        function filterProduct() {
+          const selectedProduct = product.products.filter((item) => item.category === 'electronics');
+          return selectedProduct
+        }
 
-return ( 
+        return ( 
     
-    <div className={CategoryStyle.catcontainer}>
-        <Logo />
-        <SearchBar />
-        <Nav />
-        <div>
-            {filterProduct().map(prod => (
-                <div className={CategoryStyle.card}>
-                    <ProductCard prod={prod}/>
-                </div>
-                ))}    
+        <div className={CategoryStyle.catcontainer} key={product.id}>
+          <Logo />
+          <SearchBar className={CategoryStyle.search}/>
+          <CartButton className={CategoryStyle.cart}/>
+          <Nav />
+          <div>
+              {filterProduct().map(prod => (
+                  <div className={CategoryStyle.card}>
+                      <ProductCard prod={prod}/>
+                  </div>
+                  ))}    
+          </div>
         </div>
-    </div>
-    
-    )
-        
+          
+        )
 }
 
 export default Electronics

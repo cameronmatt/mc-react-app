@@ -5,16 +5,16 @@
   
 
 .searchbar {
-    border: 0px;
+    /* border: 0px; */
     height: 40px;
     width: 100%;
     padding: 2px 23px 2px 15px;
-    background-color: #ddddddb6;
+    /* background-color: #ddddddb6; */
     margin: auto;
 }
 
-.searchbar:hover, .searchbar:focus {
+/* .searchbar:hover, .searchbar:focus {
     border: 3px solid #ddddddb6;
     background-color: white;
-  }
+  } */
 

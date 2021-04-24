@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-rows: 40px;
+    grid-template-columns: 70% 10% 10% 10%;
+    /* margin: 10px; */
+    /* position:relative */
+  }
+
+  .list {
+    list-style-type: none;
+  }
+
+  .item {
+    border-style: solid;
+    border-color: rgb(167, 167, 167);
+  }
+
+  .title {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .price {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .qty {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+ .remove {
+    grid-row: 1;
+    grid-column: 4;
+ }

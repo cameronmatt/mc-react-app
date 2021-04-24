@@ -6,11 +6,11 @@ import Logo from "./Logo"
 import ProductCard from "./ProductCard.js"
 import SearchBar from "./SearchBar"
 import Nav from "./Nav"
+import CartButton from "./CartButton"
 
 function Menswear() {
 
         const  product  = useContext(ProductsContext)
-        console.log("product", product)
     
           function filterProduct() {
             const selectedProduct = product.products.filter((item) => item.category === "men's clothing");
@@ -21,7 +21,8 @@ function Menswear() {
             
             <div className={CategoryStyle.catcontainer} key={product.id}>
                 <Logo />
-                <SearchBar />
+                <SearchBar className={CategoryStyle.search}/>
+                <CartButton className={CategoryStyle.cart}/>
                 <Nav />
                 <div>
                     {filterProduct().map(prod => (
@@ -30,7 +31,7 @@ function Menswear() {
                         </div>
                         ))}    
                 </div>
-            </div>
+             </div>
 
             )
         

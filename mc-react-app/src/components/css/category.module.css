@@ -2,7 +2,7 @@
     max-width: 960px;
     display: grid;
     grid-template-rows: 100px auto;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 60% 20%;
     grid-gap: 10px;
     padding-left: 5%;
     padding-right: 5%;
@@ -17,5 +17,18 @@
 
  .card {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 2 / span 3;
  }
+
+ .search {
+  grid-row: 1;
+  grid-column: 2;
+ }
+
+ .cartlogo {
+   height: 50%
+ }
+
+ .cartbutton {
+  height: 50%
+}
