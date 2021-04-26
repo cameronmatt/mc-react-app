@@ -1,0 +1,19 @@
+{
+  "cart": [
+    {
+      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "price": 29.95,
+      "id": 1
+    },
+    {
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "id": 2
+    },
+    {
+      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      "price": 109,
+      "id": 3
+    }
+  ]
+}
