@@ -6,9 +6,7 @@ import Womenswear from "./components/Womenswear"
 import Electronics from "./components/Electronics"
 import Jewelery from "./components/Jewelery"
 import ProductPage from './components/ProductPage'
-//import SearchBar from "./components/SearchBar"
 import { BrowserRouter, Route } from 'react-router-dom'
-import Nav from "./components/Nav"
 import ProductsContext from "./Contexts/ProductContext"
 
 
@@ -33,63 +31,26 @@ function App() {
 // Waits for components to mount then calls fetch
     useEffect(fetchProducts, [])
 
-  //   storeProducts = (data) => {
-      
-  //   }
-
-  //   let productDB = 'http://localhost:3000/products/'
-  //     fetch(productDB, {
-  //       method: 'POST',
-  //       headers: {
-  //         "Accept": "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data)
-  //     })
-  //     .then (response => response.json())
-  //     .then(data => {
-  //       this.displayProducts()
-  //       console.log('save',data)
-  //     })
-  //     .catch(postError => console.log(postError))
-
-  //   displayProducts = () => {
-  //     let productDB = 'http://localhost:3000/products/'
-  //     fetch(productDB)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({products: data})
-  //       console.log('display',data)
-  //     })
-  //     .catch(secondGetError => console.log(secondGetError))
-  // }
-
    return ( 
 
-      <div>
-
+      <div key={9889768}>
         <ProductsContext.Provider value={{products, setProducts}}>
-        {/* <SearchBar products={this.state.products} className={AppStyle.searchbar}/> */}
         
-        <BrowserRouter>
-        {/* <Nav /> */}
-        <Route exact path="/" component={Home} />
-        <Route path="/product/:id" component={ProductPage}/>
-        <Route exact path="/cart" component={Cart}/>
-        <Route exact path="/menswear" component={Menswear}/>
-        <Route exact path="/womenswear" component={Womenswear}/>
-        <Route exact path="/electronics" component={Electronics}/>
-        <Route exact path="/jewelery" component={Jewelery}/> 
-        
-        </BrowserRouter>
-        {/* <ProductPage products={this.state.products}/> */}
+          <BrowserRouter>
+
+            <Route exact path="/" component={Home} />
+            <Route path="/product/:id" component={ProductPage}/>
+            <Route exact path="/cart" component={Cart}/>
+            <Route exact path="/menswear" component={Menswear}/>
+            <Route exact path="/womenswear" component={Womenswear}/>
+            <Route exact path="/electronics" component={Electronics}/>
+            <Route exact path="/jewelery" component={Jewelery}/> 
+          
+          </BrowserRouter>
 
         </ProductsContext.Provider>
       </div>
-
-      
     )
-  
 }
 
 export default App

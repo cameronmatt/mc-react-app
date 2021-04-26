@@ -4,15 +4,14 @@ import CategoryStyle from './css/category.module.css'
 
 class CartButton extends React.Component {
 
-    
-    
-    
     render() {
 
         return (
-            <div>
-                <p className={CategoryStyle.cartbutton}>
-                    <a href="/cart"> View Cart</a>
+            <div className={CategoryStyle.cartbutton}>
+                <p>
+                    <a href="/cart" className={CategoryStyle.viewCart}> View Cart</a>
+                </p>
+                <p>
                     <a href="/cart"> <img className={CategoryStyle.cartlogo} src={Cart} alt="cart"/></a>
                 </p>
             </div>

@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from 'react'
+import React, {useEffect} from 'react'
 import ProductPageStyle from './css/ProductPage.module.css'
 import CategoryStyle from './css/category.module.css'
 import Logo from "./Logo"
@@ -42,20 +42,22 @@ function ProductPage(props) {
         // renders product images and information to the DOM
         return (
         <div className={ProductPageStyle.container} key={props.location.state.id}>
-            <Logo />
-            <SearchBar />
-            <CartButton className={CategoryStyle.cart}/>
-            <Nav />
+            <p className={CategoryStyle.logo}><Logo /></p>
+            <p className={CategoryStyle.search}><SearchBar /></p>
+            <p className={CategoryStyle.cart}><CartButton /></p>
+            <p className={CategoryStyle.nav}><Nav /></p>
             <div >
                 <div className={ProductPageStyle.prodcontainer}>
                     <p className={ProductPageStyle.title}>{props.location.state.title}</p>
                     <img className={ProductPageStyle.image} src={props.location.state.image} alt={props.location.state.title}/>
                         <div >
                             <p className={ProductPageStyle.price}> Price: ${props.location.state.price}</p>
-                            <button 
-                            className={ProductPageStyle.addCart}
-                            onClick={addProduct}
-                            > Add to Shopping Cart </button>
+                                <button 
+                                className={ProductPageStyle.addCart}
+                                onClick={addProduct}
+                                > 
+                                Add to Shopping Cart 
+                                </button>
                             <p className={ProductPageStyle.description}>{props.location.state.description}</p>
                         </div>
                 </div>

@@ -1,16 +1,15 @@
 .wrapper {
-    padding: 0%;
+    padding-top: 10px;
     width: 100%;
   }
   
 
 .searchbar {
-    /* border: 0px; */
     height: 40px;
     width: 100%;
-    padding: 2px 23px 2px 15px;
-    /* background-color: #ddddddb6; */
+    padding-top: 15px;
     margin: auto;
+    pointer-events: null
 }
 
 /* .searchbar:hover, .searchbar:focus {

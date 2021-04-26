@@ -8,16 +8,15 @@ const ProductCard = ({prod}) => {
         
             const handleClick = () => {
                 setProduct(prod)
-            
             }
 
         return ( 
              <div key={42443434} className={ProductCardStyle.item}>
-                 <a className={ProductCardStyle.all} >
-                <img className={ProductCardStyle.image} src={prod.image} alt={prod.title}/>
-                <p className={ProductCardStyle.title}>{prod.title}</p>
-                <p className={ProductCardStyle.price}> Price: ${prod.price}</p>
-                {/* <button className={ProductCardStyle.button}>View item</button> */} </a>
+                <div className={ProductCardStyle.all} >
+                    <img className={ProductCardStyle.image} src={prod.image} alt={prod.title}/>
+                    <p className={ProductCardStyle.title}>{prod.title}</p>
+                    <p className={ProductCardStyle.price}> Price: ${prod.price}</p>
+                </div>
                 <Link to={{ 
                     pathname: `product/${prod.id}`, 
                     state: {...prod}

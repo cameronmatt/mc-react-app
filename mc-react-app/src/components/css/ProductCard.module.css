@@ -1,12 +1,11 @@
 .item {
     display: grid;
-    grid-template-rows: 70% 10% 10% 10%;
+    /* grid-template-rows: 70% 10% 10% 10%; */
     grid-template-columns: 2 auto;
     border-style: solid;
     border-color: rgb(167, 167, 167);
     margin: 10px;
     padding: 15px;
-    position:relative
   }
 
   .all {
@@ -20,7 +19,7 @@
     grid-column: 1;
     padding: 5%;
     max-width:30%;
-    height:auto;
+    display: flex
   }
 
   .title {
@@ -34,8 +33,6 @@
   }
 
   .button {
-    grid-row: 4;
-    grid-column: 1;
     background-color: rgb(167, 167, 167);
     border: none;
     color: white;

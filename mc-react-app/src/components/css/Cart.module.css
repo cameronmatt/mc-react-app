@@ -1,23 +1,24 @@
-.container {
+.item {
     display: grid;
-    grid-template-rows: 40px;
-    grid-template-columns: 70% 10% 10% 10%;
+    grid-template-rows: auto;
+    grid-template-columns: 80% 10% 10%;
     /* margin: 10px; */
-    /* position:relative */
+    /* position: relative; */
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(199, 199, 199);
+    margin-bottom: 7px;
   }
 
   .list {
     list-style-type: none;
-  }
-
-  .item {
-    border-style: solid;
-    border-color: rgb(167, 167, 167);
+    padding-inline-start: 0px;
   }
 
   .title {
     grid-row: 1;
     grid-column: 1;
+    padding-left: 5px;
   }
 
   .price {
@@ -25,12 +26,20 @@
     grid-column: 2;
   }
 
-  .qty {
-    grid-row: 1;
-    grid-column: 3;
-  }
-
  .remove {
     grid-row: 1;
-    grid-column: 4;
+    grid-column: 3;
+    background: white;
+    border-style: none;
+ }
+
+ .remove:hover {
+    background: rgb(199, 199, 199);
+    border-style: none;
+    color: white;
+ }
+
+ .removeContainer {
+    margin: auto;
+    display: flex
  }

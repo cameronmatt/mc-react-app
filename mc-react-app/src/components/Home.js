@@ -8,10 +8,7 @@ import jewelery from "./Images/jewelery.png"
 import { Link } from 'react-router-dom'
 import SearchBar from "./SearchBar"
 
-
-
 const Home = () => {
-
 
         return (
 
@@ -43,7 +40,6 @@ const Home = () => {
                 </div>
             </div>
         )
-    
 }
 
 export default Home

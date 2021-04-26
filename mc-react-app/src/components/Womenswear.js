@@ -1,6 +1,5 @@
 import React, {useContext} from 'react'
 import {ProductsContext} from "../Contexts/ProductContext"
-import { Link } from 'react-router-dom'
 import CategoryStyle from './css/category.module.css'
 import Logo from "./Logo"
 import ProductCard from "./ProductCard.js"
@@ -11,29 +10,29 @@ import CartButton from "./CartButton"
 function Womenswear() {
 
   const  product  = useContext(ProductsContext)
-  console.log(product)
 
     function filterProduct() {
       const selectedProduct = product.products.filter((item) => item.category === "women's clothing");
       return selectedProduct
     }
 
-  return ( 
-      
-      <div className={CategoryStyle.catcontainer} key={product.id}>
-      <Logo />
-      <SearchBar className={CategoryStyle.search}/>
-      <CartButton className={CategoryStyle.cart}/>
-      <Nav />
-        <div>
-            {filterProduct().map(prod => (
-                <div className={CategoryStyle.card}>
-                    <ProductCard prod={prod}/>
-                </div>
-                ))}    
-        </div>
-      </div>
-  )      
+    return ( 
+            
+      <div className={CategoryStyle.catcontainer} key={4563463}>
+          <p className={CategoryStyle.logo}><Logo /></p>
+          <p className={CategoryStyle.search}><SearchBar /></p>
+          <p className={CategoryStyle.cart}><CartButton /></p>
+          <p className={CategoryStyle.nav}><Nav /></p>
+          <div className={CategoryStyle.card}>
+              {filterProduct().map(prod => (
+                  <p >
+                      <ProductCard prod={prod}/>
+                  </p>
+                  ))}    
+          </div>
+       </div>
+
+      )  
 }
 
 export default Womenswear
