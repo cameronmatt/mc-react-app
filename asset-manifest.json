@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/mc-react-app/static/css/main.e22c373a.chunk.css",
+    "main.js": "/mc-react-app/static/js/main.106067a1.chunk.js",
+    "main.js.map": "/mc-react-app/static/js/main.106067a1.chunk.js.map",
+    "runtime-main.js": "/mc-react-app/static/js/runtime-main.429920c8.js",
+    "runtime-main.js.map": "/mc-react-app/static/js/runtime-main.429920c8.js.map",
+    "static/js/2.5b5203b0.chunk.js": "/mc-react-app/static/js/2.5b5203b0.chunk.js",
+    "static/js/2.5b5203b0.chunk.js.map": "/mc-react-app/static/js/2.5b5203b0.chunk.js.map",
+    "static/js/3.f543408c.chunk.js": "/mc-react-app/static/js/3.f543408c.chunk.js",
+    "static/js/3.f543408c.chunk.js.map": "/mc-react-app/static/js/3.f543408c.chunk.js.map",
+    "index.html": "/mc-react-app/index.html",
+    "static/css/main.e22c373a.chunk.css.map": "/mc-react-app/static/css/main.e22c373a.chunk.css.map",
+    "static/js/2.5b5203b0.chunk.js.LICENSE.txt": "/mc-react-app/static/js/2.5b5203b0.chunk.js.LICENSE.txt",
+    "static/media/bluff.79e332e0.png": "/mc-react-app/static/media/bluff.79e332e0.png",
+    "static/media/cart.76ae8f8b.png": "/mc-react-app/static/media/cart.76ae8f8b.png",
+    "static/media/electronics.efb098fc.png": "/mc-react-app/static/media/electronics.efb098fc.png",
+    "static/media/jewelery.ede7c1ca.png": "/mc-react-app/static/media/jewelery.ede7c1ca.png",
+    "static/media/menswear.fb6d64bf.png": "/mc-react-app/static/media/menswear.fb6d64bf.png",
+    "static/media/womenswear.9aa4b774.png": "/mc-react-app/static/media/womenswear.9aa4b774.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.429920c8.js",
+    "static/js/2.5b5203b0.chunk.js",
+    "static/css/main.e22c373a.chunk.css",
+    "static/js/main.106067a1.chunk.js"
+  ]
+}
